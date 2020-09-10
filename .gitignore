@@ -1,0 +1,9 @@
+dist
+node_modules
+.DS_Store
+.env
+Dockerfile
+dockerignore
+up
+up.json
+Dockerrun.aws.json
