@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile</title>
+</head>
+<body>
+<h3 align='center'>Hi {{name}}, Welcome to Dashboard <br>
+{{message}}</h3>
+
+<div>
+<ul>
+{{#each ICOs as |item|}}
+<li>
+<a href='/ico/{{item.[1]}}'>{{item.[0]}}</a>
+</li>
+{{/each}}
+</div>
+
+<a href='{{job}}'> {{job}}</a>
+<a href= '/logout'>logout</a>
+</body>
+</html>

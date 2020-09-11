@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>Requirements Gathering Form</title>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+    <style>
+        body        { padding-top:80px; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+<div class="col-sm-6 col-sm-offset-3" align = center>
+    <h2>Requirements Gathering Form</h2><br><br>
+
+    <form action="" method="post" enctype="multipart/form-data">
+    <script>
+        document.getElementsByTag('form').action = document.URL;
+    </script>
+    <div class="form-group">
+        <label> Choose Template</label><br>
+        <input type="radio" name="template" value = 1 checked>Template 1</input>
+        <input type="radio" name="template" value = 2>Template 2</input>
+        <input type="radio" name="template" value = 3>Template 3</input>
+        <input type="radio" name="template" value = 4>Template 4</input>
+    </div>
+
+    <div class="form-group">
+        <label> Choose Template</label><br>
+        <input type="radio" name="colorScheme" value = 1 checked>1</input>
+        <input type="radio" name="colorScheme" value = 2>2</input>
+        <input type="radio" name="colorScheme" value = 3>3</input>
+        <input type="radio" name="colorScheme" value = 4>4</input>
+    </div>
+
+
+    {{#each uploads}}
+        <div class="form-group">
+            <label>{{this}}</label>
+            <input type="file" class="form-control" name="{{this}}" >
+        </div>
+    {{/each}}
+
+    {{#if websiteContent}}
+
+    <h1> Website Content Enabled</h1>
+
+
+
+
+
+    {{/if}}
+        <!-- div class="g-recaptcha" data-sitekey="6LfJW1sUAAAAAPP3VjGSawXjrV36K_B6FQR0SsgC"></div--> 
+        <button type="submit" class="btn btn-warning btn-lg">Submit</button>
+    </form>
+
+
+</div>
+
+</div>
+</body>
+</html>
